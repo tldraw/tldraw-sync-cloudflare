@@ -103,6 +103,8 @@ Finally, deploy your client HTML & JavaScript. Create a production build with
 `TLDRAW_WORKER_URL=https://your.workers.domain.com yarn build`. Publish the resulting build (in
 `dist/`) on a host of your choosing - we use [Vercel](https://vercel.com).
 
+If you receive the error `Invalid define value (must be an entity name or valid JSON syntax):`, you can try `TLDRAW_WORKER_URL=\"https://your.workers.domain.com\" yarn build`.
+
 When you visit your published client, it should connect to your cloudflare workers domain and sync
 your document across devices.
 
