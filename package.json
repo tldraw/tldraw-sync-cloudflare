@@ -19,15 +19,15 @@
 	},
 	"dependencies": {
 		"@cloudflare/types": "^6.29.0",
-		"@tldraw/sync": "3.13.4",
-		"@tldraw/sync-core": "3.13.4",
-		"@tldraw/tlschema": "3.13.4",
+		"@tldraw/sync": "3.14.0",
+		"@tldraw/sync-core": "3.14.0",
+		"@tldraw/tlschema": "3.14.0",
 		"cloudflare-workers-unfurl": "^0.0.7",
 		"itty-router": "^5.0.17",
 		"lodash.throttle": "^4.1.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"tldraw": "3.13.4"
+		"tldraw": "3.14.0"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250510.0",
