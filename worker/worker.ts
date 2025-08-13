@@ -7,11 +7,23 @@ export { TldrawDurableObject } from './TldrawDurableObject'
 
 // we use itty-router (https://itty.dev/) to handle routing. in this example we turn on CORS because
 // we're hosting the worker separately to the client. you should restrict this to your own domain.
+function cors(response: Response) {
+	const newHeaders = new Headers(response.headers)
+	newHeaders.set('access-control-allow-origin', '*')
+	newHeaders.set('access-control-allow-methods', '*')
+	newHeaders.set('access-control-allow-headers', '*')
+	return new Response(response.body, {
+		status: response.status,
+		headers: newHeaders,
+	})
+}
+
 const router = AutoRouter<IRequest, [env: Env, ctx: ExecutionContext]>({
 	catch: (e) => {
 		console.error(e)
 		return error(e)
 	},
+	finally: [cors],
 })
 	// requests to /connect are routed to the Durable Object, and handle realtime websocket syncing
 	.get('/api/connect/:roomId', (request, env) => {
@@ -28,6 +40,8 @@ const router = AutoRouter<IRequest, [env: Env, ctx: ExecutionContext]>({
 
 	// bookmarks need to extract metadata from pasted URLs:
 	.get('/api/unfurl', handleUnfurlRequest)
+	// handle cors preflight
+	.options('*', () => new Response(null))
 	.all('*', () => {
 		return new Response('Not found', { status: 404 })
 	})
