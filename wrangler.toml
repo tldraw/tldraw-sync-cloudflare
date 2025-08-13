@@ -21,7 +21,7 @@ bindings = [
 # Durable objects require migrations to create/modify/delete them
 [[migrations]]
 tag = "v1"
-new_classes = ["TldrawDurableObject"]
+new_sqlite_classes = ["TldrawDurableObject"]
 
 # We store rooms and asset uploads in an R2 bucket
 [[r2_buckets]]
