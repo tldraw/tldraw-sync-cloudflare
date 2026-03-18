@@ -8,16 +8,16 @@
 	"type": "module",
 	"scripts": { "dev": "vite", "build": "tsc && vite build", "preview": "vite preview" },
 	"dependencies": {
-		"@tldraw/sync": "^4.4.1",
-		"@tldraw/sync-core": "^4.4.1",
-		"@tldraw/tlschema": "^4.4.1",
+		"@tldraw/sync": "^4.5.2",
+		"@tldraw/sync-core": "^4.5.2",
+		"@tldraw/tlschema": "^4.5.2",
 		"cloudflare-workers-unfurl": "^0.0.8",
 		"itty-router": "^5.0.18",
 		"lodash.throttle": "^4.1.1",
 		"react": "^19.2.1",
 		"react-dom": "^19.2.1",
 		"react-router-dom": "^6.28.2",
-		"tldraw": "^4.4.1"
+		"tldraw": "^4.5.2"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.13.2",
@@ -28,6 +28,6 @@
 		"concurrently": "^9.1.2",
 		"typescript": "^5.8.3",
 		"vite": "^7.0.1",
-		"wrangler": "^4.37.1"
+		"wrangler": "^4.67.0"
 	}
 }
