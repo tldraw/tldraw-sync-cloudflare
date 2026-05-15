@@ -15,16 +15,16 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@tldraw/sync": "^5.0.0",
-		"@tldraw/sync-core": "^5.0.0",
-		"@tldraw/tlschema": "^5.0.0",
+		"@tldraw/sync": "^5.0.1",
+		"@tldraw/sync-core": "^5.0.1",
+		"@tldraw/tlschema": "^5.0.1",
 		"cloudflare-workers-unfurl": "^0.0.8",
 		"itty-router": "^5.0.18",
 		"lodash.throttle": "^4.1.1",
 		"react": "^19.2.1",
 		"react-dom": "^19.2.1",
 		"react-router-dom": "^6.28.2",
-		"tldraw": "^5.0.0"
+		"tldraw": "^5.0.1"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.29.1",
